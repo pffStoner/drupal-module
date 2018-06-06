@@ -1,0 +1,36 @@
+<?php
+
+function student_schema() {
+  $schema['student'] = array(
+    'fields' => array(
+      'id'=>array(
+        'type'=>'serial',
+        'not null' => TRUE,
+      ),
+      'name'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'facultynumber'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'email'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+      'gender'=>array(
+        'type' => 'varchar',
+        'length' => 40,
+        'not null' => TRUE,
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+
+  return $schema;
+
+}

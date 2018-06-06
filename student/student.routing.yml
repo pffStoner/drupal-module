@@ -1,0 +1,35 @@
+student.student_controller_display:
+  path: '/student'
+  defaults:
+    _controller: '\Drupal\student\Controller\StudentController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'edit students content'
+
+student.student_form:
+  path: 'addstudent'
+  defaults:
+    _form: '\Drupal\student\Form\StudentForm'
+    _title: 'StudentForm'
+  requirements:
+    _permission: 'edit students content'
+
+
+
+student.display_table_controller_display:
+  path: '/students'
+  defaults:
+    _controller: '\Drupal\student\Controller\DisplayTableController::display'
+    _title: 'display'
+  requirements:
+    _permission: 'access students content'
+
+
+
+student.delete_form:
+  path: '/student/delete/{cid}'
+  defaults:
+    _form: '\Drupal\student\Form\DeleteForm'
+    _title: 'DeleteForm'
+  requirements:
+    _permission: 'delete students content'
